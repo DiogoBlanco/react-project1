@@ -22,4 +22,11 @@ describe("<Posts/>", () => {
     const { container } = render(<Posts {...props} />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it("should not render posts", () => {
+    render(<Posts />);
+    expect(
+      screen.queryByRole("heading", { name: /title/i })
+    ).not.toBeInTheDocument();
+  });
 });
