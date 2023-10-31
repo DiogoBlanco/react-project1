@@ -1,6 +1,6 @@
-import "./styles.css";
-
-import { Component } from "react";
+import React from 'react';
+import './styles.css';
+import { Component } from 'react';
 
 export class Button extends Component {
   render() {
