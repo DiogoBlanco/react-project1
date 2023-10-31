@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import React from 'react';
 import './styles.css';
 import { PostCard } from '../PostCard';
@@ -9,3 +10,10 @@ export const Posts = ({ posts = [] }) => (
     ))}
   </div>
 );
+Posts.defaultProps = {
+  posts: [],
+};
+
+Posts.propTypes = {
+  posts: P.array,
+};
